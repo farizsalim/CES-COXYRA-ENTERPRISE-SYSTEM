@@ -6,10 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "create-user": "node --env-file=.env --import tsx scripts/create-user.ts",
+    "create-super-admin": "node --env-file=.env --import tsx scripts/create-super-admin.ts",
+    "import-employees": "node --env-file=.env --import tsx scripts/import-employees.ts"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "exceljs": "^4.4.0",
+    "jszip": "^3.10.2",
+    "mongoose": "^9.11.2",
     "next": "16.4.2",
+    "next-auth": "^5.0.0-beta.32",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
@@ -21,6 +29,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
